@@ -44,5 +44,6 @@ The test accuracy is 79.85% (This result uses a dropout probability of 25%)
 
 A convNet_model.pth file has been included. With this one can directly load the model state_dict and use it for testing.
 
-Thank You!!!
+
+# Thank You!!!
 
