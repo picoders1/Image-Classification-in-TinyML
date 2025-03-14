@@ -2,21 +2,21 @@
 
 The CIFAR-10 Dataset is an important image classification dataset. It consists of 60000 32x32 color images in 10 classes (airplanes, automobiles, birds, cats, deer, dogs, frogs, horses, ships, and trucks), with 6000 images per class. There are 50000 training images and 10000 test images.
 
-# Cifar-10 Dataset
+## Cifar-10 Dataset
 The dataset is divided into five training batches and one test batch, each with 10000 images. The test batch contains exactly 1000 randomly-selected images from each class. The training batches contain the remaining images in random order, but some training batches may contain more images from one class than another. Between them, the training batches contain exactly 5000 images from each class.
 
 ![cifar10](https://github.com/picoders1/Image-Classification-in-TinyML/assets/87698874/317d59ff-cfab-41e6-ba9c-b258f69f8ae3)
 
-# The GOALS of this project are to:
+## The GOALS of this project are to:
 Implement different Convolutional Neural Network (CNN) classifiers using GPU-enabled Tensorflow and Keras API Compare different CNN architectures.
 
-# Tools:
+## Tools:
 1. GPU-enabled Tensorflow
 2. Keras API
 
 Here are the classes in the dataset, as well as 10 random images from each: 
 
-# Results
+## Results
 A validation dataset of size 10,000 was deduced from the Training dataset with its size being changed to 40,000. We train the following models for 50 epochs.
 
 Parameters Initialization
@@ -25,13 +25,13 @@ These parameters have been initialized only for the Linear layers present in bot
 If n represents a number of nodes in a Linear Layer, then weights are given as a sample of normal distribution in the range (0,y). Here y represents the standard deviation calculated as y=1.0/sqrt(n)
 The normal distribution is chosen since the probability of choosing a set of weights closer to zero in the distribution is more than that of the higher values. Unlike in Uniform distribution where the probability of choosing any value is equal.
 
-# Model - 1: FFNN
+## Model - 1: FFNN
 
 This Linear Model uses 3072 nodes at the input layer, 2048, 1024, 512, and 256 nodes in the first, second, third, and fourth hidden layers respectively, with an output layer of 10 nodes (10 classes).
 The test accuracy is 52.81% (This result uses a dropout probability of 25%)
 An FNet_model.pth file has been included. With this one can directly load the model state_dict and use it for testing.
 
-# Model - 2: CNN
+## Model - 2: CNN
 
 The Convolutional Neural Network has 4 convolution layers and pooling layers with 2 fully connected layers. The first convolution layer takes in a channel of dimension 3 since the images are RGB. The kernel size is chosen to be of size 3x3 with a stride of 1. The output of this convolution is set to 16 channels which means it will extract 16 feature maps using 16 kernels. We pad the image with a padding size of 1 so that the input and output dimensions are the same. The output dimension at this layer will be 16 x 32 x 32. We apply RelU activation to it followed by a max-pooling layer with a kernel size of 2 and stride 2. This down-samples the feature maps to dimensions of 16 x 16 x 16.
 
@@ -50,5 +50,5 @@ The test accuracy is 79.85% (This result uses a dropout probability of 25%)
 A convNet_model.pth file has been included. With this one can directly load the model state_dict and use it for testing.
 
 
-# Thank You!!!
+## Thank You !!
 
