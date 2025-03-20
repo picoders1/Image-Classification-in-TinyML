@@ -1,9 +1,9 @@
 # Image-Classification-in-TinyML
 
-The CIFAR-10 Dataset is an important image classification dataset. It consists of 60000 32x32 color images in 10 classes (airplanes, automobiles, birds, cats, deer, dogs, frogs, horses, ships, and trucks), with 6000 images per class. There are 50000 training images and 10000 test images.
+The CIFAR-10 Dataset is a vital image classification dataset. It consists of 60000 32x32 color images in 10 classes (airplanes, automobiles, birds, cats, deer, dogs, frogs, horses, ships, and trucks), with 6000 images per class. There are 50000 training images and 10000 test images.
 
 ## Cifar-10 Dataset
-The dataset is divided into five training batches and one test batch, each with 10000 images. The test batch contains exactly 1000 randomly-selected images from each class. The training batches contain the remaining images in random order, but some training batches may contain more images from one class than another. Between them, the training batches contain exactly 5000 images from each class.
+The dataset is divided into five training batches and one test batch, each with 10000 images. The test batch contains exactly 1000 randomly selected images from each class. The training batches contain the remaining images in random order, but some may contain more images from one class than another. Between them, the training batches contain exactly 5000 images from each class.
 
 ![cifar10](https://github.com/picoders1/Image-Classification-in-TinyML/assets/87698874/317d59ff-cfab-41e6-ba9c-b258f69f8ae3)
 
@@ -41,13 +41,13 @@ The third convolution layer will have an input channel size of 32. We choose an 
 
 The fourth convolution layer will have an input channel size of 64. We choose an output channel size to be 128 which means it will extract 128 feature maps. The kernel size for this layer is 3 with stride 1. We again use a padding size of 1 so that the input and output dimensions remain the same. The output dimension at this layer will be 128 x 4 x 4 followed up it with a RelU activation and a max-pooling layer with a kernel of size 2 and stride 2. This down-samples the feature maps to dimensions of 128 x 2 x 2.
 
-Finally, 3 fully connected layers are used. We will pass a flattened version of the feature maps to the first fully connected layer. The fully connected layers have 512 nodes at the input layer, and 256, 64 nodes in the first and second hidden layers respectively, with output layer of 10 nodes (10 classes). So we have two fully connected layers of size 512 x 256 followed up by 256 x 64 and 64 x 10.
+Finally, 3 fully connected layers are used. We will pass a flattened version of the feature maps to the first fully connected layer. The fully connected layers have 512 nodes at the input layer, and 256, and 64 nodes in the first and second hidden layers respectively, with an output layer of 10 nodes (10 classes). So we have two fully connected layers of size 512 x 256 followed up by 256 x 64 and 64 x 10.
 
 ![cifar loss curve](https://github.com/picoders1/Image-Classification-in-TinyML/assets/87698874/1a166349-4a65-4a3b-aac1-1236039d8cea)
 
 The test accuracy is 79.85% (This result uses a dropout probability of 25%)
 
-A convNet_model.pth file has been included. With this one can directly load the model state_dict and use it for testing.
+A convNet_model.pth file has been included. With this one can directly load the model state_dict and use it for testing. 
 
 
 ## Thank You!!
