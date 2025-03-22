@@ -21,7 +21,7 @@ A validation dataset of size 10,000 was deduced from the Training dataset, and i
 
 Parameters Initialization
 Both models have been initialized with random weights sampled from a normal distribution and bias with 0.
-These parameters have been initialized only for the Linear layers present in both of the models.
+These parameters have been initialized only for the Linear layers in both models.
 If n represents several nodes in a Linear Layer, then weights are given as a sample of normal distribution in the range (0,y). Here y represents the standard deviation calculated as y=1.0/sqrt(n)
 The normal distribution is chosen since the probability of choosing a set of weights closer to zero in the distribution is more than that of the higher values. Unlike in Uniform distribution where the probability of choosing any value is equal.
 
