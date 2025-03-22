@@ -17,7 +17,7 @@ Implement different Convolutional Neural Network (CNN) classifiers using GPU-ena
 Here are the classes in the dataset, as well as 10 random images from each: 
 
 ## Results
-A validation dataset of size 10,000 was deduced from the Training dataset with its size being changed to 40,000. We train the following models for 50 epochs.
+A validation dataset of size 10,000 was deduced from the Training dataset, and its size was changed to 40,000. We train the following models for 50 epochs.
 
 Parameters Initialization
 Both models have been initialized with random weights sampled from a normal distribution and bias with 0.
